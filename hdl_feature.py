@@ -13,10 +13,22 @@ def check_HDL(hdl):
         return "Low"
     else:
         return "Borderline Low"
+# Output Function
+
+
+def output_function(hdl, analysis):
+    print("This value of HDL ({}) is {}.".format(hdl, analysis))
+    return
 
 # Driver Function calls input_function and check_HDL
 
 
 def Driver():
     x = input_function()
-    check_HDL(x)
+    message = check_HDL(x)
+    output_function(x, message)
+    return
+
+
+# Call Function
+Driver()
